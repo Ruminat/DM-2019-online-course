@@ -1,0 +1,148 @@
+.spectre-avatar {
+  font-size: 0.8rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  background: #5755d9;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.85);
+  display: inline-block;
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0;
+  position: relative;
+  vertical-align: middle; }
+  .spectre-avatar.spectre-avatar-xs {
+    font-size: 0.4rem;
+    height: 0.8rem;
+    width: 0.8rem; }
+  .spectre-avatar.spectre-avatar-sm {
+    font-size: 0.6rem;
+    height: 1.2rem;
+    width: 1.2rem; }
+  .spectre-avatar.spectre-avatar-lg {
+    font-size: 1.2rem;
+    height: 2.4rem;
+    width: 2.4rem; }
+  .spectre-avatar.spectre-avatar-xl {
+    font-size: 1.6rem;
+    height: 3.2rem;
+    width: 3.2rem; }
+  .spectre-avatar img {
+    border-radius: 50%;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1; }
+  .spectre-avatar .spectre-avatar-icon,
+  .spectre-avatar .spectre-avatar-presence {
+    background: #fff;
+    bottom: 14.64%;
+    height: 50%;
+    padding: 0.1rem;
+    position: absolute;
+    right: 14.64%;
+    -webkit-transform: translate(50%, 50%);
+    -ms-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+    width: 50%;
+    z-index: 2; }
+  .spectre-avatar .spectre-avatar-presence {
+    background: #bcc3ce;
+    -webkit-box-shadow: 0 0 0 0.1rem #fff;
+    box-shadow: 0 0 0 0.1rem #fff;
+    border-radius: 50%;
+    height: .5em;
+    width: .5em; }
+    .spectre-avatar .spectre-avatar-presence.online {
+      background: #32b643; }
+    .spectre-avatar .spectre-avatar-presence.busy {
+      background: #e85600; }
+    .spectre-avatar .spectre-avatar-presence.away {
+      background: #ffb700; }
+  .spectre-avatar[data-initial]::before {
+    color: currentColor;
+    content: attr(data-initial);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1; }
+
+.spectre-badge {
+  position: relative;
+  white-space: nowrap; }
+  .spectre-badge[data-badge]::after, .spectre-badge:not([data-badge])::after {
+    background: #5755d9;
+    background-clip: padding-box;
+    border-radius: .5rem;
+    -webkit-box-shadow: 0 0 0 0.1rem #fff;
+    box-shadow: 0 0 0 0.1rem #fff;
+    color: #fff;
+    content: attr(data-badge);
+    display: inline-block;
+    -webkit-transform: translate(-0.05rem, -0.5rem);
+    -ms-transform: translate(-0.05rem, -0.5rem);
+    transform: translate(-0.05rem, -0.5rem); }
+  .spectre-badge[data-badge]::after {
+    font-size: 0.7rem;
+    height: .9rem;
+    line-height: 1;
+    min-width: .9rem;
+    padding: .1rem .2rem;
+    text-align: center;
+    white-space: nowrap; }
+  .spectre-badge:not([data-badge])::after, .spectre-badge[data-badge=""]::after {
+    height: 6px;
+    min-width: 6px;
+    padding: 0;
+    width: 6px; }
+  .spectre-badge.btn::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%); }
+  .spectre-badge.spectre-avatar::after {
+    position: absolute;
+    top: 14.64%;
+    right: 14.64%;
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    z-index: 100; }
+
+.spectre-chip {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #eef0f3;
+  border-radius: 5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 90%;
+  height: 1.2rem;
+  line-height: 0.8rem;
+  margin: 0.1rem;
+  max-width: 320px;
+  overflow: hidden;
+  padding: 0.2rem 0.4rem;
+  text-decoration: none;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .spectre-chip.active {
+    background: #5755d9;
+    color: #fff; }
+  .spectre-chip .spectre-avatar {
+    margin-left: -0.4rem;
+    margin-right: 0.2rem; }
+  .spectre-chip .btn-clear {
+    border-radius: 50%;
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75); }
