@@ -1,23 +1,23 @@
 \documentclass[12pt]{article}
 
-\input{../../packages.tex}
+\newcommand{\import}[1]{\input{./../../commands/#1}} % импорт из папки commands
+
+\import{packages.tex}
 
 \begin{document}%
   
-  \input{../../tasks.tex}
-  \input{../../logicCommands.tex}
-  \input{../../setsAndDiscreteCommands.tex}
-  \input{../../RUSmathCommands.tex}
+  \import{tasks.tex}
+  \import{logicCommands.tex}
+  \import{setsAndDiscreteCommands.tex}
+  \import{RUSmathCommands.tex}
 
 
   \providecommand{\hiddenAnswer}[1]{}
   % \providecommand{\hiddenAnswer}[1]{\textbf{\arabic{taskCounter}. Ответ:} #1}
   \providecommand{\hiddenTask}[1]{\task{#1}}
 
-  \begin{center}%
-    \bfseries\LARGE Неделя 1. Домашнее задание \\ 
-    \Huge Множества, мультимножества, алгебра множеств
-  \end{center}
+
+  \TITLE{Неделя 1. Домашнее задание}{Множества, мультимножества, алгебра~множеств}
 
   \input{tasks.tex}
 

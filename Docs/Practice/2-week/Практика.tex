@@ -1,14 +1,16 @@
 \documentclass[12pt]{article}
 
-\input{../../packages.tex}
+\newcommand{\import}[1]{\input{./../../commands/#1}} % импорт из папки commands
+
+\import{packages.tex}
 
 \begin{document}%
   
-  \input{../../tasks.tex}
-  \input{../../textCommands.tex}
-  \input{../../logicCommands.tex}
-  \input{../../setsAndDiscreteCommands.tex}
-  \input{../../RUSmathCommands.tex}
+  \import{tasks.tex}
+  \import{textCommands.tex}
+  \import{logicCommands.tex}
+  \import{setsAndDiscreteCommands.tex}
+  \import{RUSmathCommands.tex}
 
   \input{content.tex}
 
