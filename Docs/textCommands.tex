@@ -1,0 +1,56 @@
+\renewcommand*{\thefootnote}{[\arabic{footnote}]} % изменение вида сноски с 1 на [1]
+\providecommand{\code}[1]{{\smaller \texttt{#1}}} % шрифт для кода
+
+
+% --- Таблицы (tabularx)
+\newcolumntype{L}{>{\raggedright\arraybackslash}X} % колонка, выравниваемая по левой стороне
+\newcolumntype{C}{>{\centering\arraybackslash}X}   % колонка, выравниваемая по центру
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}  % колонка, выравниваемая по правой стороне
+
+
+% --- Изображения
+% шаблон для изображений
+\providecommand{\imgs}[1]{%
+	\begin{figure}[H]%
+		\centering%
+		#1%
+	\end{figure}%
+}
+% изображение без названия и метки размера a[=1]
+% (a --- коэффициент перед \textwidth => 0 < a <= 1) [a]{path/to/image.png}
+\providecommand{\img}[2][1]{%
+	\imgs{\includegraphics[width=#1\textwidth]{#2}}%
+}
+% изображение с названием, но без метки, размера a[=1] [a]{path/to/image.png}{The Most beautiful picture}
+\providecommand{\imgt}[3][1]{%
+	\imgs{%
+		\includegraphics[width=#1\textwidth]{#3}%
+		\caption{#2}%
+	}%
+}
+% изображение с названием и с меткой размера a[=1]
+% [a]{path/to/image.png}{The Most beautiful picture}{pic:beautiful}
+\providecommand{\imgl}[4][1]{
+	\imgs{
+		\includegraphics[width=#1\textwidth]{#3}
+		\caption{#2}
+		\label{#4}
+	}
+}
+% (под)изображение (в окружении figure) размера a[=1]
+% с названием, но без метки [a]{path/to/image.png}{The Most beautiful picture}
+\providecommand{\subimg}[3][0.45]{
+	\begin{subfigure}[H]{#1\textwidth}
+		\includegraphics[width=\textwidth]{#3}
+		\caption{#2}
+	\end{subfigure}
+}
+% (под)изображение (в окружении figure) размера a[=1]
+% с названием и с меткой [a]{path/to/image.png}{The Most beautiful picture}{pic:beautiful}
+\providecommand{\subimgl}[4][0.45]{
+	\begin{subfigure}[H]{#1\textwidth}
+		\includegraphics[width=\textwidth]{#3}
+		\caption{#2}
+		\label{#4}
+	\end{subfigure}
+}

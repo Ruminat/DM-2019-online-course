@@ -1,0 +1,144 @@
+%!TeX root = ./ДомашнееЗадание.tex
+\hiddenTask{%
+  Даны множества~$A$,~$B$,~$C$:
+  \[
+    A = \qty{1, \ 2, \ 3, \ \ldots, \ 2017}, \
+    B = \qty{2, \ 3, \ 4, \ \ldots, \ 2018}, \
+    C = \qty{3, \ 4, \ 5, \ \ldots, \ 2019}.
+  \]
+  Упростите выражение:
+  \begin{equation}%
+    (A \cup B) \divisionsymbol (A \cup C) \divisionsymbol (B \cup C).
+  \end{equation}%
+}
+\hiddenAnswer{$ B $.}
+
+
+\hiddenTask{%
+  Найдите пересечение множеств~$A$~и~$B$:
+  \begin{equation}%
+    A = (\R \setminus \Z)  \cap  \qty{-\frac{256}{1}, \, \frac{256}{2}, \, -\frac{256}{4}, \, \frac{256}{8} , \, \ldots}, \
+    B = \Z \cup \qty{-\frac{1}{1}, \, \frac{1}{4}, \, -\frac{1}{16}, \, \frac{1}{64}, \, \ldots}.
+  \end{equation}%
+}
+\hiddenAnswer{$ \qty{-\frac{1}{16}, \, -\frac{1}{256}, \, -\frac{1}{2048}, \, -\frac{1}{65536}, \, \ldots} $.}
+
+
+\hiddenTask{%
+  Докажите тождество:
+  \begin{equation}
+    ((A \cap A \cup A \cap C) \cap (B \cap (B \cup C))) \cap C = \NOT{\n B \cup \n C \cup \n A}.
+  \end{equation}
+}
+
+
+\hiddenTask{%
+  Найдите наименьшее положительное значение параметра~$\lambda$, при котором количество подмножеств множества~$P$ будет равно~$64$.
+  \begin{equation}%
+    P = \qty{n \in \N \mid \lambda \text{ делится на } n}.
+  \end{equation}%
+}
+\hiddenAnswer{12.}
+
+
+\hiddenTask{%
+  Множество~$A$ определено следующим образом:
+  \begin{equation}%
+    A = \qty{x \in \R \mid \arcsin (x^2 - x - 1) = 0 \text{ или } \sqrt{\pi} - (x + 1)^2 > 0}.
+  \end{equation}
+  Запишите множество~$ A $ в виде объединения точек/отрезков/интервалов.%
+}
+\hiddenAnswer{$ A = \qty(-1 - \sqrt[4]{\pi}; \, -1 + \sqrt[4]{\pi}) \cup \qty{\frac{1}{2} \qty(1 + \sqrt 5)} $.}
+
+
+\hiddenTask{%
+  Используя основные законы алгебры множеств, упростите следующее выражение:
+  \begin{equation}
+    \qty(A \divisionsymbol \qty(\NOT{\n A \cup \n B}))
+    \cap \qty(\qty(A \cup B) \divisionsymbol \qty(A \cap B))
+  \end{equation}
+  при условии, что множества~$A$~и~$B$ не пересекаются.
+}
+\hiddenAnswer{$A$.}
+
+
+\hiddenTask{%
+  Даны множества~$X$,~$Y$~и~$Z$:
+  \begin{equation}%
+    X = \qty{a, \, b, \, c, \, \ldots, \, z}, \
+    Y = \qty{\qty{a}, \, \qty{b}, \, \qty{c}, \, \ldots, \, \qty{z}}, \
+    Z = \qty{\qty{a, \, b, \, c, \, \ldots, \, z}}.
+  \end{equation}%
+  Найдите:
+  \begin{enumerate}[a)]%
+    \item $ X \cap Y \cap Z $,
+    \item $ (X \cup Z) \setminus ((X \cup Y) \cap (Y \cup Z)) $,
+    \item $ X \divisionsymbol ((X \cup Y) \divisionsymbol (X \cup Y \cup Z)) $.
+  \end{enumerate}
+}
+\hiddenAnswer{a) $\varnothing$ \ b, c) $X \cup Z$.}
+
+
+\hiddenTask{%
+  Верно ли следующее утверждение?
+  \begin{equation}
+    (A \cup B \cup C \cup D) \divisionsymbol (A \cap B \cap C \cap D) = A \cup B \cup C \cup D \iff
+    A \cap B \cap C \cap D = \varnothing.
+  \end{equation}
+}
+\hiddenAnswer{Является.}
+
+
+\hiddenTask{%
+  Упростите выражение:
+  \begin{equation}
+    \NOT{
+           \NOT{\qty(A \divisionsymbol \qty(\qty(B \cup \qty(B \cap C)) \cap \n B))}
+      \cap \NOT{\qty(\qty(B \cup C \cap B) \cup B)}
+      \cap \NOT{\qty(C \setminus \n C)}}.
+  \end{equation}
+}
+\hiddenAnswer{$ A \cup B \cup C $.}
+
+
+\hiddenTask{%
+  Определите, тождественны ли следующие выражения:
+  \begin{equation}
+    (A_1 \cap A_2 \cap \ldots \cap A_n) \overset{?}{=}
+    (A_1 \cup A_2 \cup \ldots \cup A_n) \setminus
+    (A_1 \divisionsymbol A_2 \divisionsymbol \ldots \divisionsymbol A_n)
+  \end{equation}
+  для любого натурального~$n$, большего единицы.
+}
+\hiddenAnswer{Не тождественны.}
+
+
+\hiddenTask{%
+  Даны множества~$ P_1, \, \ldots, \, P_n $, где~$n$ "--- натуральное число. Множество~$P_k$ представляет собой множество всех натуральных степеней числа~$ 2^{p(k)} $, где~$ p(k) $ "--- простое число под номером~$k$. То есть:
+  \begin{equation}
+    \begin{array}{l}%
+      P_1 = \qty{(2^2)^1, \, (2^2)^2, \, (2^2)^3, \, (2^2)^4, \, \ldots}, \\
+      P_2 = \qty{(2^3)^1, \, (2^3)^2, \, (2^3)^3, \, (2^3)^4, \, \ldots}, \\
+      P_3 = \qty{(2^5)^1, \, (2^5)^2, \, (2^5)^3, \, (2^5)^4, \, \ldots}, \\
+      P_4 = \qty{(2^7)^1, \, (2^7)^2, \, (2^7)^3, \, (2^7)^4, \, \ldots}, \\
+      \text{и так далее.}
+    \end{array}
+  \end{equation}
+  Дано множество~$P$:
+  \begin{equation}
+    % P = (P_1 \cup P_2) \cap (P_3 \cup P_4) \cap \ldots \cap (P_{2n - 1} \cup P_{2n}).
+    P = P_1 \cap P_2 \cap P_3 \cap \ldots \cap P_n.
+  \end{equation}
+  Найдите наименьшее число, принадлежащее множеству~$P$.
+}
+\hiddenAnswer{$ 2^{2 \times 3 \times 5 \times \ldots \times p(n)} $.}
+
+
+\hiddenTask{%
+  Упростите выражение:
+  \begin{equation}%
+    \qty(\NOT{(A \cap B \cap C \cap D) \divisionsymbol (A \cup B \cup C \cup D)}) \cap
+    \qty((A \cap B \cap C \cap D) \cap (A \cup B \cup C \cup D)).
+  \end{equation}%
+}
+\hiddenAnswer{$ A \cap B \cap C \cap D $.}

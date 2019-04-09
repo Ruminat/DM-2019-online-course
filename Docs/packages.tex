@@ -1,0 +1,30 @@
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm, bindingoffset=0cm]{geometry}
+\usepackage{cmap} % поддержка Unicode при компиляции в PDF
+\usepackage{amsmath, amsthm, amssymb, mathtext} % математические пакеты
+\usepackage{physics} % содержит дифференциальные операторы (\dd, \dv, \pdv и т. д.) и не только
+\usepackage[T1, T2A]{fontenc}
+\usepackage{dsfont}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{fancybox, fancyhdr}
+\usepackage{ulem, color, graphicx, tcolorbox}
+\usepackage{float, wrapfig, subcaption}
+\usepackage{setspace} % setstretch
+\usepackage{enumerate} % дополнительный функционал для списков
+\usepackage{multicol} % разделение на несколько колонок
+\usepackage[explicit, compact]{titlesec} % изменение стиля заголовков (главы, разделы и т. д.)
+\usepackage{changepage} % margin adjustment and detection of odd/even pages
+\usepackage{needspace} % если заголовок находится в самом низу страницы, он переносится на новую
+\usepackage{ifthen} % условия
+\usepackage{tabularx} % таблицы
+\usepackage[bottom]{footmisc} % "прикрепление" сносок к низу страницы
+\usepackage{mdframed} % frames
+
+% настройка изображений
+\DeclareGraphicsExtensions{.pdf, .png, .jpg}
+\graphicspath{{./img/}}
+
+\tcbuselibrary{theorems} % подключение помпезных стилей для формул, теорем, лемм
+
+% \setlength\parindent{1.25cm} % отступ 1.25
+% \setstretch{1.5} % интервал 1.5

@@ -1,0 +1,26 @@
+\documentclass[12pt]{article}
+
+\input{../../../packages.tex}
+
+\begin{document}%
+  
+  \input{../../../tasks.tex}
+  \input{../../../logicCommands.tex}
+  \input{../../../setsAndDiscreteCommands.tex}
+  \input{../../../RUSmathCommands.tex}
+
+
+  % \providecommand{\hiddenAnswer}[1]{}
+  \providecommand{\hiddenAnswer}[1]{\textbf{\arabic{taskCounter}.} #1}
+  \providecommand{\hiddenTask}[1]{\stepcounter{taskCounter}}
+
+  \begin{center}%
+    \bfseries\LARGE Неделя 1. Ответы к домашнему заданию \\ 
+    \Huge Множества, мультимножества, алгебра множеств
+  \end{center}
+
+  \setstretch{1.5}
+
+  \input{./../tasks.tex}
+
+\end{document}

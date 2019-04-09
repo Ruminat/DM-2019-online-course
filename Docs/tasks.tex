@@ -1,0 +1,53 @@
+\newcommand{\header}[2][23536/2]{%
+	\fancyhead[R]{Фурман~В.~К.}%
+	\fancyhead[L]{Группа #1}%
+	\fancyhead[C]{\bf#2}%
+	\pagestyle{fancy}%
+}
+
+\newmdenv[
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  skipabove=\topsep,
+  skipbelow=\topsep,
+  nobreak=true,
+  linewidth=2pt
+]{leftrule}
+
+\providecommand{\taskTitle}[1]{\noindent{\bf Задание #1}}
+
+\newcounter{taskCounter}
+
+\providecommand{\task}[1]{%
+  \stepcounter{taskCounter}
+	\begin{leftrule}%
+		\taskTitle{\arabic{taskCounter}}. \textit{#1}
+	\end{leftrule}
+}
+
+\providecommand{\taskOwnTitle}[2]{%
+	\begin{leftrule}%
+		\noindent{\bf #1}. \textit{#2}
+	\end{leftrule}
+}
+
+\providecommand{\answer}[1]{%
+	\begin{mdframed}[linewidth=0.8pt, nobreak=true]%
+		\textbf{Ответ:} #1
+	\end{mdframed}
+}
+
+\providecommand{\solution}{\noindent\textbf{Решение.} }
+
+\newcommand{\TITLE}[2]{%
+    \begin{center}%
+      \bfseries\LARGE #1 \\ 
+      \Huge #2
+    \end{center}%
+  }
+  \newcommand{\subtitle}[1]{%
+    \begin{center}%
+      \bfseries\LARGE #1
+    \end{center}%
+  }
