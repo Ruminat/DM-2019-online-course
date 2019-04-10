@@ -5,10 +5,10 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Droid Serif Regular", "Droid Serif", "Lora", Bookman, Georgia;
 }
 
 h1, h2, h3, h4, h5, h6, p, li, footer {
-  font-family: "Droid Serif Regular", "Droid Serif", "Lora", Bookman, Georgia;
   font-weight: normal;
   color: black;
 }
