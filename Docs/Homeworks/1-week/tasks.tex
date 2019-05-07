@@ -1,4 +1,4 @@
-%!TeX root = ./ДомашнееЗадание.tex
+%!TeX root = ./ДЗ.tex
 \hiddenTask{%
   Даны множества~$A$,~$B$,~$C$:
   \[
@@ -24,12 +24,26 @@
 \hiddenAnswer{$ \qty{-\frac{1}{16}, \, -\frac{1}{256}, \, -\frac{1}{2048}, \, -\frac{1}{65536}, \, \ldots} $.}
 
 
-\hiddenTask{%
-  Докажите тождество:
+% \hiddenTask{%
+%   Докажите тождество:
+%   \begin{equation}
+%     ((A \cap A \cup A \cap C) \cap (B \cap (B \cup C))) \cap C = \NOT{\n B \cup \n C \cup \n A}.
+%   \end{equation}
+% }
+\hiddenTask{
+  Задана функция~$M(w)$, аргументом которой является слово русского языка. Результатом её является мультимножество из букв данного слова (регистр букв имеет значение, т.\,е. «Ф»~и~«ф» "--- разные элементы). К примеру,
   \begin{equation}
-    ((A \cap A \cup A \cap C) \cap (B \cap (B \cup C))) \cap C = \NOT{\n B \cup \n C \cup \n A}.
+    M(\text{Математика}) = \qty{\text{М}, \, \text{а}, \, \text{т}, \, \text{е}, \, \text{м}, \, \text{а}, \, \text{т}, \, \text{и}, \, \text{к}, \, \text{а}}.
   \end{equation}
+  Определите, равны ли мультимножества:
+  \begin{enumerate}[a)]%
+    \item $ M(\text{Бар}) $ и $ M(\text{Раб}) $.
+    \item $ M(\text{синус}) $ и $ M(\text{косинус}) $.
+    \item $ M(\text{марка}) $ и $ M(\text{карма}) $.
+    \item $ M(\text{МаТематИкА}) $ и $ M(\text{маТеМАтИка}) $.
+  \end{enumerate}
 }
+\hiddenAnswer{a, b) не равны \ c, d) равны.}
 
 
 \hiddenTask{%
@@ -135,10 +149,26 @@
 
 
 \hiddenTask{%
-  Упростите выражение:
-  \begin{equation}%
-    \qty(\NOT{(A \cap B \cap C \cap D) \divisionsymbol (A \cup B \cup C \cup D)}) \cap
-    \qty((A \cap B \cap C \cap D) \cap (A \cup B \cup C \cup D)).
-  \end{equation}%
+  Дано единичное множество~$\mathfrak J$, которое является множеством решений уравнения:
+  \begin{equation}
+    \cos x = \sin x.
+  \end{equation}
+  Даны так же множества~$ A_1 $~и~$ A_2 $:
+  \begin{equation}
+    A_1 = \qty{-\frac{3\pi}{4}}, \ A_2 = \qty{\frac{\pi}{4}}.
+  \end{equation}
+  Выпишите все конституенты, укажите, являются ли множества~$ A_1 $~и~$ A_2 $ независимыми.
 }
-\hiddenAnswer{$ A \cap B \cap C \cap D $.}
+\hiddenAnswer{%
+  Конституенты: $ \varnothing, \, \qty{-\frac{3\pi}{4}}, \, \qty{\frac{\pi}{4}}, \, \mathfrak J \setminus \qty{-\frac{3\pi}{4}, \, \frac{\pi}{4}} $. Множества~$ A_1 $~и~$ A_2 $ зависимы.
+}
+
+
+% \hiddenTask{%
+%   Упростите выражение:
+%   \begin{equation}%
+%     \qty(\NOT{(A \cap B \cap C \cap D) \divisionsymbol (A \cup B \cup C \cup D)}) \cap
+%     \qty((A \cap B \cap C \cap D) \cap (A \cup B \cup C \cup D)).
+%   \end{equation}%
+% }
+% \hiddenAnswer{$ A \cap B \cap C \cap D $.}

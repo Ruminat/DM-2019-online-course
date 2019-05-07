@@ -27,8 +27,9 @@
 }
 
 \providecommand{\taskOwnTitle}[2]{%
+  \stepcounter{taskCounter}
 	\begin{leftrule}%
-		\noindent{\bf #1}. \textit{#2}
+		\noindent{\bf #1 \arabic{taskCounter}}. \textit{#2}
 	\end{leftrule}
 }
 
