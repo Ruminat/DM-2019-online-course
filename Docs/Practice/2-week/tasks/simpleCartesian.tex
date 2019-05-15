@@ -1,5 +1,4 @@
-%!TeX root = ./Практика.tex
-
+%!TeX root = ./../Практика.tex
 % Декартово произведение
 \task{%
   Выпишите все элементы множества~$A$.
@@ -34,6 +33,10 @@
           \\ 
         \end{array}
       \]
+      Заметим, что декартово произведение $ \qty{a, \, b, \, c} \times \qty{1, \, 2, \, 3} $ дало бы нам те же самые векторы с переставленными элементами (то есть, к примеру, вектор $ \Vector{1, \, a} $ превратился бы в~$ \Vector{a, \, 1} $), а это, вообще говоря, уже другие векторы (порядок элементов в векторе имеет значение). Иными словами, \textit{в общем случае} декартово произведение не коммутативно:
+      \begin{equation}
+        A \times B \not= B \times A.
+      \end{equation}
       
     \item Прежде чем что-то выписывать, заметим, что~$ B \divisionsymbol B = \varnothing $. Декартово произведение любого множества с пустым множеством даст нам пустое множество. Таким образом, мы получаем~$ A = \varnothing $.
     
@@ -59,7 +62,7 @@
           \Vector{\Vector{{\color{Mgreen} 3}, \, {\color{Mred} e}},   \, 0}. & \\ 
         \end{array}
       \end{equation}
-      Как можно заметить, хоть элементы векторов и совпадают, структуры они имеют разные. В первом случае мы имеем дело с векторами вида~$\Vector{a, \, \Vector{b, \, c}}$, во втором же "--- с векторами вида~$ \Vector{\Vector{a, \, b}, \, c} $. Строго говоря, в общем случае декартово произведение не ассоциативно, то есть:
+      Как можно заметить, хоть элементы векторов и совпадают, структуры они имеют разные. В первом случае мы имеем дело с векторами вида~$\Vector{a, \, \Vector{b, \, c}}$, во втором же "--- с векторами вида~$ \Vector{\Vector{a, \, b}, \, c} $. Строго говоря, \textit{в общем случае} декартово произведение не ассоциативно, то есть:
       \begin{equation}
         (A \times B) \times C \not= A \times (B \times C).
       \end{equation}
@@ -73,7 +76,11 @@
       % \end{equation}
       % В данном курсе мы будем придерживаться формального (строгого) определения, если заранее не будет оговорено, что мы имеем дело с определением вида~\eqref{easyPeasy}.
 
-      В результате мы получаем лишь векторы из~$ X \times \qty(Y \times Z) $.
+      Однако в нашем примере скобки имеются, поэтому множества:
+      \[
+        X \times \qty(Y \times Z) \text{ и } \qty(X \times Y) \times Z, \text{ "---}
+      \]
+      не имеют общих элементов, а это в свою очередь значит, что в ответе мы получим векторы из выражения~\eqref{rightCartesian}. 
   \end{enumerate}
 }
 \answer{%
@@ -87,70 +94,3 @@
     \item $ \Vector{1, \, \Vector{\pi, \, 0}}, \Vector{2, \, \Vector{\pi, \, 0}}, \Vector{3, \, \Vector{\pi, \, 0}}, \Vector{1, \, \Vector{e, \, 0}}, \Vector{2, \, \Vector{e, \, 0}}, \Vector{3, \, \Vector{e, \, 0}} $.
   \end{enumerate}
 }
-
-% Декартово произведение
-\task{%
-  Дано множество~$ \mathbb B = \{0, \, 1\} $. Для каждого натурального~$n$ найдите сумму количеств единиц в каждом из векторов множества~$\mathbb B^n$. К примеру, при~$n = 2$:
-  \[
-    \mathbb B^2 = \{\Vector{0, \, 0}, \, \Vector{0, \, 1}, \, \Vector{1, \, 0}, \, \Vector{1, \, 1}\},
-  \]
-  в сумме получаем 4 единицы.
-}
-\solution{%
-  % Выпишем суммы для первых 3-х~$n$:
-  % \[
-  %   \begin{array}{rclrl}%
-  %     n = 1 & \Rightarrow & \mathbb B   & \Rightarrow & 1 \text{ единица}, \\ 
-  %     n = 2 & \Rightarrow & \mathbb B^2 & \Rightarrow & 4 \text{ единицы}, \\ 
-  %     n = 3 & \Rightarrow & \mathbb B^3 & \Rightarrow & 12 \text{ единиц}. \\ 
-  %   \end{array}
-  % \]
-  Заметим, что общее количество нулей и единиц для конкретного~$n$ есть ничто иное, как $ n \cdot 2^n $.
-  Действительно, множество~$\mathbb B^n$ содержит $2^n$ векторов, каждый из которых состоит из $n$ элементов (нулей и единиц). К примеру, для~$ n = 3 $ имеем (8~векторов по 3~элемента в каждом):
-  \[
-    \begin{array}{c}%
-      \underset{(1)}{\Vector{0, \, 0, \, 0}}, \,
-      \underset{(2)}{\Vector{0, \, 0, \, 1}}, \,
-      \underset{(3)}{\Vector{0, \, 1, \, 0}}, \,
-      \underset{(4)}{\Vector{0, \, 1, \, 1}}, \\ 
-      \underset{(5)}{\Vector{1, \, 0, \, 0}}, \,
-      \underset{(6)}{\Vector{1, \, 0, \, 1}}, \,
-      \underset{(7)}{\Vector{1, \, 1, \, 0}}, \,
-      \underset{(8)}{\Vector{1, \, 1, \, 1}}. \\ 
-    \end{array}
-  \]
-  Заметим, что в сумме для всех векторов количество нулей и единиц совпадает. И вправду, для~$n = 1$ это очевидно, а для каждого последующего~$n$ мы получаем векторы путём добавления нуля и единицы к каждому текущему вектору, то есть, к примеру, из $\mathbb B^2$ получаем следующие векторы для $\mathbb B^3$:
-  \[
-    \begin{array}{c}%
-      \Vector{{\color{Mgreen} 0}, \, {\color{Mgreen} 0}} \to
-      \Vector{{\color{Mgreen} 0}, \, {\color{Mgreen} 0}, \, {\color{Mred} 0}}, \,
-      \Vector{{\color{Mgreen} 0}, \, {\color{Mgreen} 0}, \, {\color{Mred} 1}}, \\ 
-      \Vector{{\color{Mgreen} 0}, \, {\color{Mgreen} 1}} \to
-      \Vector{{\color{Mgreen} 0}, \, {\color{Mgreen} 1}, \, {\color{Mred} 0}}, \,
-      \Vector{{\color{Mgreen} 0}, \, {\color{Mgreen} 1}, \, {\color{Mred} 1}}, \\ 
-      \Vector{{\color{Mgreen} 1}, \, {\color{Mgreen} 0}} \to
-      \Vector{{\color{Mgreen} 1}, \, {\color{Mgreen} 0}, \, {\color{Mred} 0}}, \,
-      \Vector{{\color{Mgreen} 1}, \, {\color{Mgreen} 0}, \, {\color{Mred} 1}}, \\ 
-      \Vector{{\color{Mgreen} 1}, \, {\color{Mgreen} 1}} \to
-      \Vector{{\color{Mgreen} 1}, \, {\color{Mgreen} 1}, \, {\color{Mred} 0}}, \,
-      \Vector{{\color{Mgreen} 1}, \, {\color{Mgreen} 1}, \, {\color{Mred} 1}}. \\ 
-    \end{array}
-  \]
-  Значит, в результате мы получаем $ n \cdot 2^{n - 1} $ единиц.
-}
-\answer{%
-  $ n \cdot 2^{n - 1} $.
-}
-
-% Функции
-\task{%
-  Задана функция~$ f $:
-  \begin{equation}
-    f \colon \R \to \R, \ f(x) = \sgn (x) \cdot \qty([x]^2 + \{x\}^2),
-  \end{equation}
-  Найдите область определения и множество значений функции~$f$. Определите, является ли функция инъекцией, сюръекцией, биекцией.
-}
-
-% \task{%
-%   somebody once told me the world is gonna roll me
-% }

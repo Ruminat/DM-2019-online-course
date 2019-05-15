@@ -1,0 +1,72 @@
+% Бинарные отношения
+\task{%
+  Даны множества~$A$~и~$B$:
+  \[
+    A = B = \{\text{{\color{Mred} камень}, {\color{Mgreen} ножницы}, {\color{Mblue} бумага}}\}.
+  \]
+  Определим бинарное отношение~$R$ следующим образом:
+  \[
+    R = \text{побеждает}\colon \ aRb \iff a \text{ побеждает } b.
+  \]
+  То есть, к примеру, $ \Vector{\text{{\color{Mred} камень}, {\color{Mgreen} ножницы}}} \in R $,
+  но $ \Vector{\text{{\color{Mred} камень}, {\color{Mblue} бумага}}} \not\in R $.
+  Выпишите~$R$ в явном виде (множество векторов).
+  Найдите:
+  \[
+    \text{$\delta_R$, $\rho_R$, $R^{-1}$, $-R$, $R(\{\text{{\color{Mred} камень}, {\color{Mblue} бумага}}\})$.}
+  \]
+}
+\solution{%
+  Выпишем~$R$ в явном виде:
+  \[
+    R = \{
+      \Vector{\text{{\color{Mred} камень}, {\color{Mgreen} ножницы}}}, \
+      \Vector{\text{{\color{Mgreen} ножницы}, {\color{Mblue} бумага}}}, \
+      \Vector{\text{{\color{Mblue} бумага}, {\color{Mred} камень}}}
+    \}.
+  \]
+  
+  Понятно, что~$\delta_R = \rho_R = \{\text{{\color{Mred} камень}, {\color{Mgreen} ножницы}, {\color{Mblue} бумага}}\}$,
+  так как для любого элемента~$a \in A$ найдётся элемент~$b \in A$ (напомним, что~$A = B$) такой, что $ aRb $.
+  
+  Напомним, что обратное бинарное отношение к~$R$ есть ничто иное, как:
+  \begin{equation}
+    R^{-1} = \{\Vector{a, \, b} \in A \times B \mid bRa\}.
+  \end{equation}
+  Выпишем~$R^{-1}$:
+  \[
+    R^{-1} = \{
+      \Vector{\text{{\color{Mgreen} ножницы}, {\color{Mred} камень}}}, \
+      \Vector{\text{{\color{Mblue} бумага}, {\color{Mgreen} ножницы}}}, \
+      \Vector{\text{{\color{Mred} камень}, {\color{Mblue} бумага}}}
+    \}.
+  \]
+
+  Напомним, что дополнением к бинарному отношению~$R$ является:
+  \begin{equation}
+    -R = (A \times B) \setminus R.
+  \end{equation}
+  Выпишем все векторы~$-R$:
+  \[
+    \begin{array}{lll}%
+      \Vector{\text{{\color{Mred} камень}, {\color{Mblue} бумага}}}, & 
+      \Vector{\text{{\color{Mgreen} ножницы}, {\color{Mred} камень}}}, & 
+      \Vector{\text{{\color{Mblue} бумага}, {\color{Mgreen} ножницы}}}, \\
+      \Vector{\text{{\color{Mred} камень}, {\color{Mred} камень}}}, & 
+      \Vector{\text{{\color{Mgreen} ножницы}, {\color{Mgreen} ножницы}}}, & 
+      \Vector{\text{{\color{Mblue} бумага}, {\color{Mblue} бумага}}}.
+    \end{array}
+  \]
+
+  Образом множества~$X$ относительно бинарного отношения~$R$ называется множество:
+  \begin{equation}
+    R(X) = \{b \in B \mid \exists \, a \in X : aRb\}.
+  \end{equation}
+  Выпишем образ множества~$ \{\text{{\color{Mred} камень}, {\color{Mblue} бумага}}\} $:
+  \[
+    R(\{\text{{\color{Mred} камень}, {\color{Mblue} бумага}}\}) = \{
+      \Vector{\text{{\color{Mred} камень}, {\color{Mgreen} ножницы}}}, \
+      \Vector{\text{{\color{Mblue} бумага}, {\color{Mred} камень}}}
+    \}.
+  \]
+}

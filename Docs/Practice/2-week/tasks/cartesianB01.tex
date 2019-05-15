@@ -1,0 +1,47 @@
+%!TeX root = ./../Практика.tex
+% Декартово произведение
+\task{%
+  Дано множество~$ \mathbb B = \{0, \, 1\} $. Для каждого натурального~$n$ найдите сумму количеств единиц в каждом из векторов множества~$\mathbb B^n$. К примеру, при~$n = 2$:
+  \[
+    \mathbb B^2 = \{\Vector{0, \, 0}, \, \Vector{0, \, 1}, \, \Vector{1, \, 0}, \, \Vector{1, \, 1}\},
+  \]
+  в сумме получаем 4 единицы.
+}
+\solution{%
+  Заметим, что общее количество нулей и единиц для конкретного~$n$ есть ничто иное, как $ n \cdot 2^n $.
+  Действительно, множество~$\mathbb B^n$ содержит $2^n$ векторов, каждый из которых состоит из $n$ элементов (нулей и единиц). К примеру, для~$ n = 3 $ имеем (8~векторов по 3~элемента в каждом):
+  \[
+    \begin{array}{c}%
+      \underset{\color{gray} (1)}{\Vector{0, \, 0, \, 0}}, \,
+      \underset{\color{gray} (2)}{\Vector{0, \, 0, \, 1}}, \,
+      \underset{\color{gray} (3)}{\Vector{0, \, 1, \, 0}}, \,
+      \underset{\color{gray} (4)}{\Vector{0, \, 1, \, 1}}, \\ 
+      \underset{\color{gray} (5)}{\Vector{1, \, 0, \, 0}}, \,
+      \underset{\color{gray} (6)}{\Vector{1, \, 0, \, 1}}, \,
+      \underset{\color{gray} (7)}{\Vector{1, \, 1, \, 0}}, \,
+      \underset{\color{gray} (8)}{\Vector{1, \, 1, \, 1}}. \\ 
+    \end{array}
+  \]
+
+  Заметим, что в сумме для всех векторов количество нулей и единиц совпадает. И вправду, для~$n = 1$ это очевидно, а для каждого последующего~$n$ мы получаем векторы путём добавления нуля и единицы к каждому текущему вектору, то есть, к примеру, из $\mathbb B^2$ получаем следующие векторы для $\mathbb B^3$:
+  \[
+    \begin{array}{c}%
+      \Vector{{\color{Mgreen} 0}, \, {\color{Mgreen} 0}} \to
+      \Vector{{\color{Mred} 0}, \, {\color{Mgreen} 0}, \, {\color{Mgreen} 0}}, \,
+      \Vector{{\color{Mred} 1}, \, {\color{Mgreen} 0}, \, {\color{Mgreen} 0}}, \\ 
+      \Vector{{\color{Mgreen} 0}, \, {\color{Mgreen} 1}} \to
+      \Vector{{\color{Mred} 0}, \, {\color{Mgreen} 0}, \, {\color{Mgreen} 1}}, \,
+      \Vector{{\color{Mred} 1}, \, {\color{Mgreen} 0}, \, {\color{Mgreen} 1}}, \\ 
+      \Vector{{\color{Mgreen} 1}, \, {\color{Mgreen} 0}} \to
+      \Vector{{\color{Mred} 0}, \, {\color{Mgreen} 1}, \, {\color{Mgreen} 0}}, \,
+      \Vector{{\color{Mred} 1}, \, {\color{Mgreen} 1}, \, {\color{Mgreen} 0}}, \\ 
+      \Vector{{\color{Mgreen} 1}, \, {\color{Mgreen} 1}} \to
+      \Vector{{\color{Mred} 0}, \, {\color{Mgreen} 1}, \, {\color{Mgreen} 1}}, \,
+      \Vector{{\color{Mred} 1}, \, {\color{Mgreen} 1}, \, {\color{Mgreen} 1}}. \\ 
+    \end{array}
+  \]
+  Значит, в результате мы получаем $ n \cdot 2^{n - 1} $ единиц.
+}
+\answer{%
+  $ n \cdot 2^{n - 1} $.
+}
