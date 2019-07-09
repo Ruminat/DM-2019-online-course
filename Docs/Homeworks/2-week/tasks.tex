@@ -1,0 +1,57 @@
+%!TeX root = ./ДЗ.tex
+
+
+% Декартово произведение
+\hiddenTask{%
+  Для любого натурального~$n$ найдите количество элементов
+  в множестве~$C$ при условии, что в множестве~$A_k$ ровно $k$~элементов
+  (то есть, например, в~$A_4$ 4 элемента, в~$A_2$ "--- 2).
+  \[
+    \begin{array}{rcl}%
+      A & = & A_1 \times A_2 \times \ldots \times A_{n - 1} \times A_n, \\ 
+      B & = &  (A_1 \times (A_2 \times (\ldots \times (A_{n - 1} \times A_n)\ldots))) \setminus A, \\
+      C & = & A \setdiv B. 
+    \end{array}
+  \]
+}
+\hiddenAnswer{1 элемент при $ n = 1 $ и $ 2n! $ элементов при $ n > 1 $.}
+
+
+% Декартово произведение
+\hiddenTask{%
+  Используя свойства декартова произведения, упростите следующие выражения:
+  \begin{enumerate}[a)]%
+    \item $ A \times B \times C \times \qty(\qty(A \times B) \cap \qty(A \times \n B)) $;
+    \item $ \qty(A \cap \n B) \times \qty(A \cap (B \cup A)) $,
+      при этом $A$~и~$B$ не пересекаются;
+    \item $ \qty(
+        (C \times B) \cup (B \times C) \cup (C \times A) \cup (A \times C)
+      )^{21} $,
+      при этом $A \cup B = C$.
+  \end{enumerate}
+}
+\hiddenAnswer{%
+  a) $ \varnothing $, \
+  b) $ A^2 $, \
+  c) $ C^{42} $.%
+}
+
+
+% Бинарные отношения
+\hiddenTask{%
+  Используя свойства декартова произведения, упростите следующие выражения:
+  \begin{enumerate}[a)]%
+    \item $ A \times B \times C \times \qty(\qty(A \times B) \cap \qty(A \times \n B)) $;
+    \item $ \qty(A \cap \n B) \times \qty(A \cap (B \cup A)) $,
+      при этом $A$~и~$B$ не пересекаются;
+    \item $ \qty(
+        (C \times B) \cup (B \times C) \cup (C \times A) \cup (A \times C)
+      )^{21} $,
+      при этом $A \cup B = C$.
+  \end{enumerate}
+}
+\hiddenAnswer{%
+  a) $ \varnothing $, \
+  b) $ A^2 $, \
+  c) $ C^{42} $.%
+}

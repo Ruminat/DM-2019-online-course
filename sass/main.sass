@@ -1,0 +1,79 @@
+@import '../static/normalize.scss'
+
+$bg-color: #000000
+$active-color: #3bd8ec
+
+@font-face
+  font-family: "Roboto"
+  src: url('../static/robotolight.ttf')
+
+*
+  box-sizing: border-box
+
+html, body
+  background: $bg-color
+
+div, h1, h2, h3, h4, h5, h6, p, li, footer, a, button
+  font-weight: normal
+  color: white
+  font-family: "Roboto", Verdana, "Droid Serif", "Lora", Bookman, Georgia
+
+body
+  display: flex
+
+.main, .content
+  min-height: 100vh
+
+.main
+  text-align: center
+  width: 40vw
+  display: flex
+  align-items: center
+  justify-content: center
+
+.content
+  width: 60vw
+  height: 100vh
+  overflow-y: auto
+
+.main-img
+  width: 60%
+
+a, button
+  cursor: pointer
+
+button
+  background: none
+  border: none
+  outline: none
+
+.button-text
+  color: $active-color
+
+.main .title:first-child
+  margin-top: 0
+
+.title
+  text-align: center
+
+.module-title
+  font-weight: bold
+
+.week-item
+  margin-bottom: 0.2rem
+
+.modules
+  display: grid
+  grid-template-columns: 1fr 1fr
+
+.module-block
+  padding: 0.5rem
+
+@media screen and (max-width: 800px)
+  body
+    display: block
+  .main, .content
+    width: 100vw
+  .modules
+    display: block
+    padding: 0.7rem

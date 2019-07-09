@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  title Онлайн курс ДМ
+
+  link(rel="icon" href="img/pi-icon.png")
+
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+  link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+
+  link(rel="stylesheet" href="css/main.css")
+body
+  .main
+    .wrapper-for-centering
+      h2.title Онлайн-курс
+        | <br> <b>Дискретная математика</b>
+
+      img.main-img(src="img/pi.png")
+
+      h5.title от Санкт-Петербургского
+        | <br> Политехнического университета
+
+      a(href="https://github.com/Ruminat/DM-2019-online-course")
+        button.btn.btn-default(type="button")
+          span.button-text: <i class="fab fa-github"></i> GitHub
+      a(href="https://openedu.ru/")
+        button.btn.btn-default(type="button")
+          span.button-text: <i class="fas fa-book-reader"></i> Открытое образование
+
+  -
+    function romanize (num) {
+        if (isNaN(num))
+            return NaN;
+        var digits = String(+num).split(""),
+            key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+                   "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+                   "","I","II","III","IV","V","VI","VII","VIII","IX"],
+            roman = "",
+            i = 3;
+        while (i--)
+            roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+        return Array(+digits.join("") + 1).join("M") + roman;
+    }
+
+    const modules = [
+      {
+        title: 'Теория множеств',
+        weeks: [
+          {title: 'Множества, мультимножества, алгебра множеств'},
+          {title: 'Отношения и функции (НЕ ЗАКОНЧЕНО)'},
+          //- {title: 'Мощности множеств. Упорядоченные множества'},
+        ]
+      },
+      //- {
+      //-   title: 'Комбинаторика',
+      //-   weeks: [
+      //-     {title: 'Перестановки, размещения, сочетания'},
+      //-     {title: 'Бином Ньютона и полиномиальная формула'},
+      //-     {title: 'Принцип включений и исключений'},
+      //-   ]
+      //- },
+      //- {
+      //-   title: 'Булевы функции',
+      //-   weeks: [
+      //-     {title: 'Элементарные булевы функции. Алгебра булевых функций'},
+      //-     {title: 'Специальные представления булевых функций. Двойственность'},
+      //-     {title: 'Замкнутые классы и полнота. Теорема Поста'},
+      //-   ]
+      //- },
+      //- {
+      //-   title: 'Теория графов',
+      //-   weeks: [
+      //-     {title: 'Основные понятия теории графов. Маршруты, пути, цепи, циклы'},
+      //-     {title: 'Связность. Планарность'},
+      //-     {title: 'Деревья'},
+      //-   ]
+      //- },
+    ]
+
+  .content
+    .modules.wrapper-for-centering
+      each module, m in modules
+        .module-block
+          h2.module-title <i class="fas fa-cube"></i> Модуль #{romanize(m + 1)}. #{module.title}
+          .weeks
+            each week, w in module.weeks
+              .week-block
+                h4.week-title <i class="far fa-calendar-alt"></i> Неделя #{3*m + w + 1}.
+                  | <br><b>#{week.title}</b>
+                  //- | <br> #{week.title}
+                .week-item
+                  a(href="Docs/Practice/"+ (3*m + w + 1) +"-week/Практика.pdf")
+                    button.btn.btn-default(type="button")
+                      span.button-text <i class="far fa-file-pdf"></i> Практическое занятие
+                .week-item
+                  a(href="Docs/Homeworks/"+ (3*m + w + 1) +"-week/ДЗ.pdf")
+                    button.btn.btn-default(type="button")
+                      span.button-text <i class="far fa-file-pdf"></i> Домашнее задание
+                .week-item
+                  a(href="Docs/Homeworks/"+ (3*m + w + 1) +"-week/answers/Ответы.pdf")
+                    button.btn.btn-default(type="button")
+                      span.button-text <i class="far fa-file-pdf"></i> Ответы к ДЗ

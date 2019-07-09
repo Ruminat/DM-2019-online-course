@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+
+\newcommand{\import}[1]{\input{./../../commands/#1}} % импорт из папки commands
+
+\import{packages.tex}
+
+\begin{document}%
+  
+  \import{tasks.tex}
+  \import{logicCommands.tex}
+  \import{setsAndDiscreteCommands.tex}
+  \import{RUSmathCommands.tex}
+
+
+  % \providecommand{\hiddenAnswer}[1]{}
+  \providecommand{\hiddenAnswer}[1]{\textbf{\arabic{taskCounter}. Ответ:} #1}
+  \providecommand{\hiddenTask}[1]{\task{#1}}
+
+
+  \TITLE{Неделя 2. Домашнее задание}{Отношения и функции}
+
+  \input{tasks.tex}
+
+\end{document}
