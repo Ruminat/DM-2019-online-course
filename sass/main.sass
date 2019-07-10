@@ -8,7 +8,7 @@ $active-color: #3bd8ec
   src: url('../static/robotolight.ttf')
 
 *
-  box-sizing: border-box
+  box-sizing: border-box !important
 
 html, body
   background: $bg-color
@@ -34,7 +34,9 @@ div, h1, h2, h3, h4, h5, h6, p, li, footer, a, button
 .content
   width: calc(60vw - 2rem)
   height: 100vh
-  margin-left: 40vw
+  position: absolute
+  right: 0
+  top: 0
 
 .main-img
   width: 60%
@@ -56,35 +58,34 @@ button
 .title
   text-align: center
 
+.modules
+  display: flex
+  flex-wrap: wrap
+
 .week-item
   margin-bottom: 0.2rem
 
-.modules
-  display: grid
-  grid-template-columns: 1fr 1fr
-
 .module-block
+  width: 50%
   padding: 0.5rem
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: 768px)
   .main, .content
     position: static
     margin: 0
-    width: 100vw
+    padding: 0
+    border: none
+    outline: none
+    width: 100%
   .modules
     display: block
-    padding: 0.7rem
+    padding: 1rem
     height: auto !important
+  .module-block
+    width: 100%
 
-@media screen and (max-width: 1200px) and (min-width: 801px)
-  .main
-    width: 35vw
+@media screen and (min-width: 768px) and (max-width: 1200px)
   .content
-    width: calc(65vw - 2rem)
-    margin-left: 35vw
     display: block
-    // grid-template-columns: 1fr
-  // .modules
-  //   display: block
-  //   padding: 0.7rem
-  //   height: auto !important
+  .module-block
+    width: 100%
